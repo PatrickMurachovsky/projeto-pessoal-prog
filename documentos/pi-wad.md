@@ -117,7 +117,7 @@ As relações entre as tabelas do banco de dados são entre as informações do 
 
 ### 3.3. Wireframes (Semana 03)
 
-*Posicione aqui as imagens do wireframe construído para sua solução e, opcionalmente, o link para acesso (mantenha o link sempre público para visualização).*
+file:///C:/Users/murac/Downloads/Wireframes%20Baixa%20Fidelidade.pdf 
 
 ### 3.4. Guia de estilos (Semana 05)
 
