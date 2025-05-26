@@ -56,3 +56,4 @@ describe('User Model', () => {
     expect(isDeleted).toBe(false);
   });
 });
+

@@ -97,6 +97,8 @@ para gerenciar meus compromissos de qualquer lugar.
 
 *Posicione aqui os diagramas de modelos relacionais do seu banco de dados, apresentando todos os esquemas de tabelas e suas relações. Utilize texto para complementar suas explicações, se necessário.*
 
+![alt text](../assets/banco_de_dados.png)
+
 As relações entre as tabelas do banco de dados são entre as informações do usuário e as tarefas, sendo assim o usuário coloca suas informações como, nome, email, idade. Com isso essas informações são salvas e as tarefas que devem ser realizadas serão atribuídas ao utilizador.
 
 *Posicione também o modelo físico com o Schema do BD (arquivo .sql)*
