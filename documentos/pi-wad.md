@@ -130,6 +130,10 @@ file:///C:/Users/murac/Downloads/Wireframes%20Baixa%20Fidelidade.pdf
 
 *Posicione aqui algumas imagens demonstrativas de seu protótipo de alta fidelidade e o link para acesso ao protótipo completo (mantenha o link sempre público para visualização).*
 
+![alt text](../assets/calendarioPrototipo.png)
+
+![alt text](prototipo.png)
+
 ### 3.6. WebAPI e endpoints (Semana 05)
 
 *Utilize um link para outra página de documentação contendo a descrição completa de cada endpoint. Ou descreva aqui cada endpoint criado para seu sistema.*  
