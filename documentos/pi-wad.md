@@ -5,7 +5,11 @@
 
 ## Nome do Projeto
 
+Base Data
+
 #### Autor do projeto
+
+Patrick Natan Murachovsky
 
 ## Sumário
 
@@ -106,6 +110,19 @@ As relações entre as tabelas do banco de dados são entre as informações do 
 ### 3.1.1 BD e Models (Semana 5)
 *Descreva aqui os Models implementados no sistema web*
 
+O model User é responsável por realizar as operações de CRUD (Create, Read, Update, Delete) na tabela users do banco de dados. Ele utiliza métodos estáticos e executa consultas SQL de forma segura, utilizando placeholders para evitar SQL Injection.
+
+Métodos disponíveis:
+getAll(): Retorna todos os usuários cadastrados. Executa a consulta SELECT * FROM users; e retorna um array com os objetos representando cada usuário.
+
+getById(id): Retorna um usuário específico de acordo com o id fornecido. Executa a consulta SELECT * FROM users WHERE id = $1; e retorna o objeto do usuário encontrado ou undefined caso não exista.
+
+create(data): Insere um novo usuário no banco de dados com os dados informados. O parâmetro data deve conter as propriedades nome, idade, email e senha. Executa a consulta INSERT INTO users (nome, idade, email, senha) VALUES ($1, $2, $3, $4) RETURNING *; e retorna o objeto do usuário recém-criado.
+
+update(id, data): Atualiza as informações de um usuário com base no id. O data deve conter as propriedades nome, idade, email e senha. Executa a consulta UPDATE users SET nome = $1, idade = $2, email = $3, senha = $4 WHERE id = $5 RETURNING *; e retorna o objeto atualizado.
+
+delete(id): Remove um usuário com base no id. Executa a consulta DELETE FROM users WHERE id = $1 RETURNING *; e retorna true se um registro foi excluído ou false caso não tenha sido encontrado.
+
 ### 3.2. Arquitetura (Semana 5)
 
 *Posicione aqui o diagrama de arquitetura da sua solução de aplicação web. Atualize sempre que necessário.*
@@ -124,6 +141,8 @@ file:///C:/Users/murac/Downloads/Wireframes%20Baixa%20Fidelidade.pdf
 ### 3.4. Guia de estilos (Semana 05)
 
 *Descreva aqui orientações gerais para o leitor sobre como utilizar os componentes do guia de estilos de sua solução.*
+
+As orientações para fazer o uso adequado da plataforma Base Data que tem como o seu principal objetivo, gerenciar as tarefas do usúario e entregar uma melhor organização pessoal, para o utilizador. Para fazer o uso correto, a pessoa deve, ter um breve conhecimento de como utilizar computadores e celulares, e também, esclarescer bem suas tarefas para a plataforma organizar - las e entregar uma boa organização.
 
 
 ### 3.5. Protótipo de alta fidelidade (Semana 05)
