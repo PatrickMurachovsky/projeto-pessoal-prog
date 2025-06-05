@@ -4,10 +4,11 @@ const cors = require('cors');
 
 const tarefaRoutes = require('./routes/tarefaRoutes');
 const userRoutes = require('./routes/userRoutes');
-const frontRoutes = require('./routes/frontRoutes.js');
+const frontRoutes = require('./routes/frontRoutes');
 
 const app = express();
 const port = 3000;
+app.set('view engine', 'ejs');
 
 // Middlewares
 app.use(cors());

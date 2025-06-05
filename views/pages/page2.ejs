@@ -1,2 +1,87 @@
 <h2>Página 2</h2>
 <p>Conteúdo da Página 2.</p>
+
+// Buscar dados
+<script>
+fetch('/api/tarefas')
+  .then(res => res.json())
+  .then(tarefas => {
+    tarefas.forEach(tarefa => {
+      // Criar elementos e mostrar na tela
+    });
+  });
+
+// Enviar dados (POST)
+fetch('/api/tarefas', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({ titulo: 'Nova tarefa' })
+});
+</script>
+
+<input type="date">
+
+
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calendário</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #0e4a7e;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      background-color: white;
+      margin: 40px auto;
+      padding: 30px;
+      border-radius: 30px;
+      max-width: 90%;
+      height: 80vh;
+      box-shadow: 0 0 0 4px #0593ff;
+      position: relative;
+    }
+
+    .titulo {
+      background-color: #05386b;
+      color: white;
+      font-weight: bold;
+      font-size: 22px;
+      padding: 15px 30px;
+      border-radius: 25px 25px 25px 0;
+      display: inline-block;
+      margin-bottom: 30px;
+    }
+
+    .botao {
+      background: linear-gradient(135deg, #2a71a3, #3a8cc1);
+      color: white;
+      font-weight: bold;
+      padding: 15px 20px;
+      border-radius: 50px;
+      width: max-content;
+      margin-left: 40px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .botao:hover {
+      background: linear-gradient(135deg, #3a8cc1, #2a71a3);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="titulo">Calendário</div>
+    <div class="botao" onclick="window.location.href='/ver-calendario'">
+      Clique Aqui para visualizar o calendário
+    </div>
+  </div>
+</body>
+</html>
