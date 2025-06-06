@@ -19,7 +19,7 @@ fetch('/api/tarefas', {
 });
 </script>
 
-<input type="date">
+
 
 
 
@@ -69,6 +69,7 @@ fetch('/api/tarefas', {
       margin-left: 40px;
       text-align: center;
       cursor: pointer;
+
     }
 
     .botao:hover {
@@ -80,7 +81,9 @@ fetch('/api/tarefas', {
   <div class="container">
     <div class="titulo">Calendário</div>
     <div class="botao" onclick="window.location.href='/ver-calendario'">
-      Clique Aqui para visualizar o calendário
+            <input type="date">
+
+      Clique Aqui para visualizar o calendário 
     </div>
   </div>
 </body>
