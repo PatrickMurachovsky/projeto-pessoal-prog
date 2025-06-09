@@ -43,4 +43,10 @@ class Tarefa {
   }
 }
 
+module.exports = (sequelize, DataTypes) => {
+  const Tarefa = sequelize.define("Tarefa", {
+    titulo: DataTypes.STRING
+  });
+  return Tarefa;
+};
 module.exports = Tarefa;

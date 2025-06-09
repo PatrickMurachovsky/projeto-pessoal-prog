@@ -9,3 +9,5 @@ router.put('/:id', tarefaController.updateTarefa);
 router.delete('/:id', tarefaController.deleteTarefa);
 
 module.exports = router;
+
+

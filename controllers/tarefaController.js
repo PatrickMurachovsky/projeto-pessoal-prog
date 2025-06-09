@@ -73,10 +73,27 @@ const deleteTarefa = async (req, res) => {
   }
 };
 
+const tarefaModel = require('../models/tarefaModel');
+exports.listarTarefas = async (req, res) => {
+  const tarefas = await tarefaModel.getAll();
+  res.render('tarefas', { tarefas });
+};
+
+// No controller
+exports.apiListarTarefas = async (req, res) => {
+  const tarefas = await tarefaModel.getAll();
+  res.json(tarefas);
+};
+exports.apiCriarTarefa = async (req, res) => {
+  const nova = await tarefaModel.create(req.body);
+  res.status(201).json(nova);
+};
+
 module.exports = {
   getAllTarefas,
   getTarefaById,
   createTarefa,
   updateTarefa,
   deleteTarefa,
+  tarefaModel,
 };
