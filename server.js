@@ -6,7 +6,6 @@ const tarefaRoutes = require('./routes/tarefaRoutes');
 const userRoutes = require('./routes/userRoutes');
 const frontRoutes = require('./routes/frontRoutes');
 const authRoutes = require('./routes/authRoutes');
-app.use('/', authRoutes);
 
 
 const app = express();
