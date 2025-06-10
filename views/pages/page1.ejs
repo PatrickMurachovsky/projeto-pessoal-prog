@@ -61,5 +61,19 @@
       <button type="submit">Cadastrar/Entrar</button>
     </form>
   </div>
+  <script>
+    document.querySelector('form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const email = document.querySelector('input[name="email"]').value;
+      const password = document.querySelector('input[name="password"]').value;
+
+      if (!email || !password) {
+        event.preventDefault();
+        alert('Por favor, preencha todos os campos.');
+      }
+
+      window.location.href = '/about';
+    });
+  </script>
 </body>
 </html>

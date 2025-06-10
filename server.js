@@ -24,6 +24,7 @@ app.use(express.static('views/js'));
 app.use('/users', userRoutes);
 app.use('/tarefas', tarefaRoutes);
 app.use('/', frontRoutes);
+app.use('/login', authRoutes);
 
 // Inicializa o servidor
 app.listen(port, () => {

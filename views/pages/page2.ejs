@@ -76,11 +76,15 @@ fetch('/api/tarefas', {
 <body>
   <div class="container">
     <div class="titulo">Calendário</div>
-    <div class="botao" onclick="window.location.href='/ver-calendario'">
+    <div class="botao">
             <input type="date">
 
       Clique Aqui para visualizar o calendário 
     </div>
   </div>
 </body>
+<ul id="lista-tarefas"></ul>
+<input type="text" id="novo-titulo" placeholder="Título da tarefa">
+<button onclick="criarTarefa(document.getElementById('novo-titulo').value)">Adicionar</button>
+<script src="/tarefas.js"></script>
 </html>

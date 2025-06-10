@@ -25,5 +25,3 @@ function criarTarefa(titulo) {
     alert('Tarefa criada!');
   });
 }
-
-app.use(express.static('views/js'));
