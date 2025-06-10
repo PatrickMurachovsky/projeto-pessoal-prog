@@ -2,12 +2,12 @@ const express = require('express');
 const router = express.Router();
 const db = require('../config/db');
 
-router.post('/login', async (req, res) => {
+router.get('/login', async (req, res) => {
   const { email, senha } = req.body;
 
   // Verifica no banco
   const result = await db.query(
-    'SELECT * FROM users WHERE email = $1 AND senha = $2',
+    'SELECT * FROM users WHERE email = $1 AND senha = null',
     [email, senha]
   );
 
