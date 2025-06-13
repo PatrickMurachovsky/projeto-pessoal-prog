@@ -17,6 +17,13 @@ router.get('/about', (req, res) => {
   });
 });
 
+router.get('/register', (req, res) => {
+  res.render('layout/main', {
+    pageTitle: 'Cadastro',
+    content: 'pages/register'
+  });
+});
+
 // Adicione outras rotas conforme necessário
 
 module.exports = router;
