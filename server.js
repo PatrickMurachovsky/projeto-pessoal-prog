@@ -22,6 +22,7 @@ app.use(bodyParser.json());
 app.use(express.static('views/css'));
 app.use(express.static('views/js'));
 
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
@@ -30,7 +31,7 @@ app.use('/users', userRoutes);
 app.use('/tarefas', tarefaRoutes);
 app.use('/', frontRoutes);
 app.use('/login', authRoutes);
-app.use('/cadastro', postRoutes); // ou outro caminho, conforme seu front-end
+app.use('/login', postRoutes); // ou outro caminho, conforme seu front-end
 
 // Inicializa o servidor
 app.listen(port, () => {

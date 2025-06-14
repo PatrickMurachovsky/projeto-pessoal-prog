@@ -24,8 +24,6 @@ router.get('/register', (req, res) => {
   });
 });
 
-// Adicione outras rotas conforme necessário
-
 module.exports = router;
 
 

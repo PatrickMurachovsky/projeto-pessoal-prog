@@ -25,3 +25,34 @@ function criarTarefa(titulo) {
     alert('Tarefa criada!');
   });
 }
+
+// Exemplo: views/js/users.js
+
+function carregarUsuarios() {
+  fetch('/users')
+    .then(res => res.json())
+    .then(users => {
+      const lista = document.getElementById('lista-usuarios');
+      lista.innerHTML = '';
+      users.forEach(user => {
+        const li = document.createElement('li');
+        li.textContent = `${user.nome} (${user.email})`;
+        lista.appendChild(li);
+      });
+    });
+}
+
+window.onload = carregarUsuarios;
+
+function criarUsuario(nome, idade, email, senha) {
+  fetch('/users', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ nome, idade, email, senha })
+  })
+  .then(res => res.json())
+  .then(novoUsuario => {
+    alert('Usuário criado!');
+    carregarUsuarios();
+  });
+}
