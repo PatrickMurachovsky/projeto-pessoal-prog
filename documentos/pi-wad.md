@@ -161,6 +161,8 @@ As orientações para fazer o uso adequado da plataforma Base Data que tem como 
 
 *Descreva e ilustre aqui o desenvolvimento do frontend do sistema web, explicando brevemente o que foi entregue em termos de código e sistema. Utilize prints de tela para ilustrar.*
 
+O frontend do sistema web desenvolvido consiste em duas telas sendo a primeira a tela de login, que o usuario precisa inserir seus dados como e-mail, e senha e entrar. Já a segunda tela e composta por um calendário que o usúario deve inserir a data desejada, em que á alguma tarefa a ser realizada neste dia e o usuario pode adicionar as suas tarefas com base nas datas no calendário.
+
 ---
 
 ## <a name="c4"></a>4. Desenvolvimento da Aplicação Web (Semana 8)
