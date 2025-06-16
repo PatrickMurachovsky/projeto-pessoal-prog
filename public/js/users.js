@@ -1,3 +1,8 @@
+document.getElementById('form-cadastro')?.addEventListener('submit', function (event) {
+  event.preventDefault();
+  criarUsuario();
+});
+
 function carregarUsuarios() {
   fetch('/users')
     .then(res => res.json())
@@ -23,11 +28,11 @@ function criarUsuario() {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ nome, idade, email, senha })
   })
-  .then(res => res.json())
-  .then(() => {
-    alert('Usuário criado!');
-    carregarUsuarios();
-  });
+    .then(res => res.json())
+    .then(() => {
+      alert('Usuário criado!');
+      carregarUsuarios();
+    });
 }
 
 window.onload = carregarUsuarios;
