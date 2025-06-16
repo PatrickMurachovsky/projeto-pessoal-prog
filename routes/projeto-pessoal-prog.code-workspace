@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "projeto-pessoal-prog",
+			"path": ".."
+		}
+	],
+	"settings": {
+		"postman.settings.dotenv-detection-notification-visibility": false
+	}
+}
