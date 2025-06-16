@@ -6,6 +6,7 @@ const getAllUsers = async () => {
     const result = await db.query('SELECT * FROM users');
     return result.rows;
   } catch (error) {
+    console.error("Erro real ao obter usuários:", error);
     throw new Error('Erro ao obter usuários: ' + error.message);
   }
 };

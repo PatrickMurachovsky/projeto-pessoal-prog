@@ -1,12 +1,11 @@
 const express = require('express');
 const router = express.Router();
 const userController = require('../controllers/userController');
-const e = require('express');
 
+// Rota GET para listar todos os usuários
 router.get('/', userController.getAllUsers);
-router.get('/:id', userController.getUserById);
+
+// Rota POST para criar novo usuário
 router.post('/', userController.createUser);
-router.put('/:id', userController.updateUser);
-router.delete('/:id', userController.deleteUser);
 
 module.exports = router;
