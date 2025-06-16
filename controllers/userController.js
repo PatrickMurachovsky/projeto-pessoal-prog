@@ -25,12 +25,16 @@ const getUserById = async (req, res) => {
 const createUser = async (req, res) => {
   try {
     const { nome, idade, email, senha } = req.body;
+    
+    // Aqui você chama o service para criar o usuário no banco:
     const newUser = await userService.createUser(nome, idade, email, senha);
+    
     res.status(201).json(newUser);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
 };
+
 
 const updateUser = async (req, res) => {
   try {
