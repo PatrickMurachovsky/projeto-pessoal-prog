@@ -1,44 +1,33 @@
 const express = require('express');
-const path = require('path');
-const cors = require('cors');
-
-// Rotas
-const tarefaRoutes = require('./routes/tarefaRoutes');
-const userRoutes = require('./routes/userRoutes');
-const frontRoutes = require('./routes/frontRoutes');
-const authRoutes = require('./routes/authRoutes');
-const postRoutes = require('./routes/postRoutes');
-
 const app = express();
-const port = 3000;
+const path = require('path');
+const usersRouter = require('./routes/userRoutes');
+const tarefasRouter = require('./routes/tarefaRoutes');
+const authRouter = require('./routes/authRoutes'); // agora vai ser útil
 
-// View engine
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static('public'));
+
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views')); // importante se for usar partials
+app.set('views', path.join(__dirname, 'views'));
 
-// Middlewares
-app.use(cors());
-app.use(express.json()); // ✅ para ler req.body em JSON
-app.use(express.urlencoded({ extended: true })); // ✅ para ler req.body em forms (POST)
-
-// Servir arquivos estáticos (css, js, imgs)
-app.use(express.static(path.join(__dirname, 'public')));        // pasta pública geral
-app.use('/css', express.static(path.join(__dirname, 'views/css'))); // arquivos CSS
-app.use('/js', express.static(path.join(__dirname, 'views/js')));   // arquivos JS
-
-// Rotas API
-app.use('/tarefas', tarefaRoutes);  // ✅ API REST de tarefas
-app.use('/users', userRoutes);      // ✅ API REST de usuários
-
-// Rotas de frontend (páginas)
-app.use('/', frontRoutes);
-
-// Rotas de login/autenticação
-app.use('/login', authRoutes);
-// ⚠️ Evite conflitos: se postRoutes também é para login, junte em um só
-// app.use('/login', postRoutes);
-
-// Inicializa o servidor
-app.listen(port, () => {
-  console.log(`Servidor rodando em http://localhost:${port}`);
+// páginas principais
+app.get('/', (req, res) => {
+  res.render('main', { pageTitle: 'Login', content: 'login' });
 });
+
+app.get('/cadastro', (req, res) => {
+  res.render('main', { pageTitle: 'Cadastro', content: 'cadastro' });
+});
+
+app.get('/tarefas', (req, res) => {
+  res.render('main', { pageTitle: 'Tarefas', content: 'tarefas' });
+});
+
+// rotas de API
+app.use('/users', usersRouter);
+app.use('/api/tarefas', tarefasRouter);
+app.use('/login', authRouter); // esta será a rota de login
+
+app.listen(3000, () => console.log('Servidor rodando em http://localhost:3000'));

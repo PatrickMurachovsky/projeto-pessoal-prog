@@ -14,10 +14,3 @@ CREATE TABLE "tarefas" (
   duracao INTEGER,
   etiquetas VARCHAR(20)
 );
-
-ALTER TABLE "tarefas" ADD CONSTRAINT "tarefa" FOREIGN KEY ("id_usuario") REFERENCES "users" ("id");
-
-INSERT INTO "users" (nome, idade, email, senha)
-VALUES ('Joao', 20, 'joao@email.com', null),
-('Marcos', 21, 'marcos@email.com', null),
-('Patrick', 22, 'patrick@email.com', null)
