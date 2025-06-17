@@ -169,8 +169,9 @@ O frontend do sistema web desenvolvido consiste em duas telas sendo a primeira a
 
 ### 4.1 Demonstração do Sistema Web (Semana 8)
 
-*VIDEO: Insira o link do vídeo demonstrativo nesta seção*
-*Descreva e ilustre aqui o desenvolvimento do sistema web completo, explicando brevemente o que foi entregue em termos de código e sistema. Utilize prints de tela para ilustrar.*
+https://www.loom.com/share/5f6c54afa9b147c180684420342c5489
+
+
 
 ### 4.2 Conclusões e Trabalhos Futuros (Semana 8)
 
